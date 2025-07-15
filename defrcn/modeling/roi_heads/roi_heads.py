@@ -901,7 +901,7 @@ class CommonalityROIHeads(ROIHeads):
                 prot_s = self.queue_s[c][:self.queue_ptr[c]]
 
             if len(prot_s) > 0:
-                mem_features = torch.vstack((mem_features, prot_s))
+                mem_features = torch.cat((mem_features, prot_s))
                 labels = c * torch.ones(len(prot_s)).to(self.device)
                 mem_labels = torch.cat((mem_labels, labels))
 
@@ -949,7 +949,7 @@ class CommonalityROIHeads(ROIHeads):
             final_foreground_features = other_forg_class_features[0:1, 0:MAX, :]
             final_foreground_label = other_forg_class_labels[0:1, 0:MAX]
             
-            closest = indices[i, 1] if indices[i, 0] == forg_label else indices[i, 0]
+            closest = indices[i, -1] if indices[i, 0] == forg_label else indices[i, -1]
             closest_class_idx = torch.where(sim_mining_labels[0,:] == closest)[0]
             closest_class_features = sim_mining_features[0:1, closest_class_idx, :]
             closest_class_labels = sim_mining_labels[0:1, forg_class_idx]

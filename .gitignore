@@ -48,3 +48,16 @@ wandb/
 datasets/
 trained_queue*
 queue*
+
+.nfs*
+datasets
+all_coco_voc.sh
+all_voc.sh
+coco_inference.sh
+coco_train_base.sh
+coco_train2.sh
+coco_train3.sh
+membank.sh
+voc_train.sh
+voc_train2.sh
+voc_train3.sh

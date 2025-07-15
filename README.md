@@ -1,4 +1,12 @@
-# Multi-Faceted Distillation of Base-Novel Commonality for Few-shot Object Detection, ECCV 2022
+# Robust Feature Space Organization with Distillation for Few-Shot Object Detection, ICPR 2024
+
+(To be updated)
+
+This codebase was used to generate the results in 
+```
+Shenoy, Vineet R., and Rama Chellappa. "Robust Feature Space Organization with Distillation for Few-Shot Object Detection." International Conference on Pattern Recognition. Cham: Springer Nature Switzerland, 2024.
+```
+
 
 This repo is built upon [DeFRCN](https://github.com/er-muyue/DeFRCN), where you can download the datasets and the pre-trained weights.
 
@@ -37,14 +45,8 @@ CUDA == 10.1
 
 
 ## Training and Evaluation
-* For VOC
-```
-sh voc_train.sh mfdc SPLIT_ID
-```
 * For COCO
 ```
-sh coco_train.sh mfdc
+bash coco_train.sh experiment_name
 ```
 
-## Contact
-Please feel free to contact me (Email: wushuang9811@outlook.com) if you have any questions.
